@@ -1,0 +1,459 @@
+:root {
+  --white: #FFFFFF;
+  --black: #0D0F14;
+  --red: #F60827;
+  --blue: #1A1B23;
+  --fs: 1.1rem;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;/*
+  font-family: 'Architects Daughter',cursive;
+  font-family: 'Comic Neue', cursive;*/
+}
+html {
+  scroll-snap-type: y mandatory;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background: var(--black);
+}
+.NavBar {
+  width: 100%;
+  height: 65px;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  z-index: 10;
+}
+.NavBar .logo {
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.NavBar .logo:first-letter {
+  color: var(--red);
+}
+.NavBar .Menu {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 25px;
+}
+#checkbox {
+  display: none;
+}
+.toggle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition-duration: .4s;
+  z-index: 6;
+}
+.bars {
+  width: 100%;
+  height: 2px;
+  background-color: var(--white);
+  border-radius: 3px;
+}
+#bar2 {
+  transition-duration: .8s;
+}
+#bar1,#bar3 {
+  width: 70%;
+}
+#checkbox:checked + .toggle .bars {
+  position: absolute;
+  transition-duration: .5s;
+}
+#checkbox:checked + .toggle #bar2 {
+  transform: scaleX(0);
+  transition-duration: .5s;
+}
+#checkbox:checked + .toggle #bar1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: .5s;
+}
+#checkbox:checked + .toggle #bar3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: .5s;
+}
+#checkbox:checked + .toggle {
+  transition-duration: .5s;
+  transform: rotate(180deg);
+}
+.MenuItems {
+  width: 100%;
+  height: 100%;
+  background: var(--black);
+  position: fixed;
+  top: 0;
+  left: -100%;
+  padding: 150px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: left 0.3s;
+  z-index: 5;
+}
+.MenuItems a {
+  width: 50%;
+  height: auto;
+  padding: 13px 0;
+  text-decoration: none;
+  border-radius: 5px;
+  background: var(--white);
+  color: var(--black);
+  font-size: var(--fs);
+  text-align: center;
+  font-weight: bold;
+}
+.MenuItems a:first-letter {
+  color: var(--red);
+}
+.MenuItemsOn {
+  left: 0;
+}
+.section1 {
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+.Movie_1 {
+  width: 100%;
+  height: 100%;
+}
+.MCover {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  filter: blur(3px);
+}
+.Shadow {
+  width: 100%;
+  height: 530px;
+  position: absolute;
+  top: 0;
+  box-shadow: inset 0 0 60px 65px var(--black);
+}
+.MInfo {
+  width: 100%;
+  height: 50%;
+  background: transparent;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  z-index: 3;
+}
+.MName {
+  width: 100%;
+  height: auto;
+  min-height: 30px;
+  color: var(--white);
+  font-size: 1.3rem;
+  font-weight: bold;
+  gap: 5px;
+  padding: 0 20px;
+  text-align: center;
+}
+.MName small {
+  font-size: 16px;
+}
+.MRating {
+  width: 100%;
+  height: auto;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+.Rating {
+  width: 50px;
+  height: 30px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: yellow;
+  font-weight: bold;
+}
+.Rating::before {
+  content: "⭐";
+  position: relative;
+  top: -2px;
+}
+.RBox {
+  width: 55px;
+  height: 30px;
+  background: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: var(--black);
+  border-radius: 5px;
+}
+.MGender {
+  width: 90%;
+  height: auto;
+  height: 50px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  overflow: auto;
+}
+.Gender {
+  width: auto;
+  height: 40px;
+  background: var(--blue);
+  border-radius: 5px;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  font-size: 14px;
+  padding: 0 10px
+}
+.MStory {
+  width: 90%;
+  height: auto;
+  padding: 10px 20px;
+  background: transparent;
+  color: var(--white);
+  opacity: 0.8;
+  text-align: justify;
+}
+.section2 {
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+.TopCostTitle {
+  padding: 20px 0;
+  text-align: center;
+  color: var(--white);
+  font-size: var(--fs);
+  font-weight: bold;
+}
+.TopCostTitle:first-letter {
+  color: var(--red);
+}
+.CostsBox {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 10px;
+  padding: 0 20px;
+  overflow: auto;
+  background: transparent;
+}
+.Costs {
+  width: 120px;
+  height: auto;
+  border-radius: 5px;
+  background: var(--white);
+  padding: 5px 5px 0 5px;
+  overflow: auto;
+}
+.CostsImg {
+  width: 100%;
+  height: 150px;
+}
+.CostsImg > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.CostsName {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.CostsName > span {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  color: var(--black);
+  font-size: 14px;
+  padding: 5px;
+  overflow: auto;
+}
+.CostsName > span p {
+  opacity: 0.5;
+}
+.MovieImages {
+  padding: 20px 0;
+  text-align: center;
+  color: var(--white);
+  font-size: var(--fs);
+  font-weight: bold;
+}
+.MovieImages:first-letter {
+  color: var(--red);
+}
+.MImagesBox {
+  width: 95vw;
+  height: auto;
+  background: transparent;
+  display: grid;
+  grid-auto-flow: column;
+  overflow: scroll;
+  scroll-snap-type: x mandatory;
+}
+.MImagesBox > div {
+  width: 95vw;
+  height: 240px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.MImagesBox > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.Shadow_2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  box-shadow: inset 0 0 25px 30px var(--black);
+  display: none;
+}
+.section3 {
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  background: transparent;
+}
+.TrailerTitle {
+  padding: 20px 0;
+  text-align: center;
+  color: var(--white);
+  font-size: var(--fs);
+  font-weight: bold;
+}
+.TrailerTitle:first-letter {
+  color: var(--red);
+}
+.TrailerBox {
+  width: 100%;
+  height: 220px;
+  padding: 5px 10px;
+  background: transparent;
+}
+.TrailerBox > iframe {
+  border-radius: 5px;
+}
+.SimilarTitle {
+  padding: 20px 0;
+  text-align: center;
+  color: var(--white);
+  font-size: var(--fs);
+  font-weight: bold;
+}
+.SimilarTitle:first-letter {
+  color: var(--red);
+}
+.SimilarMoviesBox {
+  width: 100%;
+  height: 300px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  overflow: scroll;
+}
+.Movie {
+  width: 150px;
+  height: 230px;
+  overflow: hidden;
+  position: relative;
+  background: var(--blue);
+  border-radius: 7px;
+}
+.Movie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.Movie .MovieInfo {
+  width: 100%;
+  height: 55px;
+  position: absolute;
+  bottom: -55px;
+  backdrop-filter: blur(5px);
+  transition: 0.3s;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5px;
+  gap: 3px;
+}
+.Movie:hover .MovieInfo {
+  bottom: 0px;
+}
+.MovieInfo .MovieName {
+  color: var(--white);
+  font-size: 13px;
+}
+.MovieInfo .MovieName small {
+  font-size: 11px;
+  position: relative;
+  bottom: 0.5px;
+  left: 2px;
+}
+.MovieRating {
+  font-size: 14px;
+  color: yellow;
+  font-weight: bold;
+}
+.MovieRating::before {
+  content: '⭐';
+  position: relative;
+  top: -1.5px;
+  right: 1px;
+}
