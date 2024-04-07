@@ -44,13 +44,11 @@ body {
   justify-content: center;
   box-shadow: 5px 5px 10px 4px #0000002E;
 }
-.NavBar a {
-  position: absolute;
-  left: 25px;
-}
-.NavBar a img {
+.NavBar img { 
   width: 30px;
   height: 30px;
+  position: absolute;
+  left: 25px;
 }
 .NavBar > p { /* Logo */
   font-size: var(--fs);
@@ -140,6 +138,59 @@ input[type]:checked ~ span.mid {
   background: var(--bg);
   padding: 100px 25px 10px 25px;
 }
+
+/* User Box Fro Search */
+.UserBox {
+  width: 100%;
+  height: 70px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.UserBox input {
+  width: 80%;
+  height: 50px;
+  border: 2.5px solid var(--bg2);
+  outline: none;
+  padding: 5px 45px 4px 15px;
+  color: var(--tx);
+  border-radius: 7px;
+  font-size: 1.1rem;
+}
+.UserBox img {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 13%;
+}
+.error {
+  border: 2.5px solid var(--red);
+}
+
+/* User Options Box */
+.OptionsBox {
+  width: 100%;
+  height: auto;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0 20px 0;
+}
+.ItemsBox {
+  width: 50%;
+  height: 45px;
+  border: 2.5px solid var(--tx);
+  border-radius: 5px;
+  background: transparent;
+  text-align: center;
+  font-size: var(--fs2);
+  color: var(--tx);
+  outline: none;
+}
+
 /* Style The Titles */
 .Titles {
   width: 100%;
@@ -173,14 +224,16 @@ input[type]:checked ~ span.mid {
 .TitlesStyle span:nth-child(1) {
   width: 25px;
 }
-/* Movies Box Style */
-.MoviesBox {
+
+/* Search Box Style */
+.SearchBox {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 /* Movie Card Style */
 .Movie {
   width: 48%;
@@ -247,6 +300,7 @@ input[type]:checked ~ span.mid {
   font-weight: bold;
 }
 
+/* Search Result */
 /* Movies Box Content & MoreBtn */
 .MBContent {
   width: 100%;
@@ -254,13 +308,13 @@ input[type]:checked ~ span.mid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  row-gap: 10px;
-  padding-top: 10px;
+  row-gap: 5px;
+  padding-top: 20px;
 }
 .MoreBtn {
   width: 100%;
   height: 140px;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -279,58 +333,6 @@ input[type]:checked ~ span.mid {
   width: 30px;
   height: 30px;
 }
-
-/* All Genders */
-.GendersDiv {
-  width: 100vw;
-  height: auto;
-  position: relative;
-}
-.GendersBox {
-  width: 100vw;
-  height: auto;
+.showBtn {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  overflow: scroll;
-  overflow-y: hidden;
-  padding: 30px 25px 10px 25px;
-  background: transparent;
-}
-.GenderBox {
-  height: 40px;
-  padding: 0 20px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 3px solid var(--bg2);
-}
-.GenderBox p {
-  color: var(--tx);
-  font-weight: bold;
-}
-.Shadow1 {
-  width: 60px;
-  height: 100%;
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  left: 0;
-  box-shadow: inset 15px 10px 10px 5px var(--bg);
-}
-.Shadow2 {
-  width: 60px;
-  height: 100%;
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  right: 0;
-  box-shadow: inset -15px 10px 10px 5px var(--bg);
-}
-.Active {
-  background: var(--red);
-}
-.Active p {
-  color: var(--tx2);
 }

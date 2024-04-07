@@ -48,7 +48,7 @@ body {
   position: absolute;
   left: 25px;
 }
-.NavBar a img {
+.NavBar a img { 
   width: 30px;
   height: 30px;
 }
@@ -173,16 +173,16 @@ input[type]:checked ~ span.mid {
 .TitlesStyle span:nth-child(1) {
   width: 25px;
 }
-/* Movies Box Style */
-.MoviesBox {
+/* TV Box Style */
+.TVBox {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-/* Movie Card Style */
-.Movie {
+/*  Card Style */
+.TV {
   width: 48%;
   height: auto;
   border-radius: 7px;
@@ -190,7 +190,7 @@ input[type]:checked ~ span.mid {
   text-decoration: none;
   overflow: hidden;
 }
-.MovieCover {
+.TVCover {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -198,12 +198,12 @@ input[type]:checked ~ span.mid {
   display: flex;
   flex-direction: column;
 }
-.MovieCover img {
+.TVCover img {
   width: 100%;
   height: 220px;
   object-fit: cover;
 }
-.MovieRiting {
+.TVRiting {
   width: 50px;
   height: 30px;
   border-radius: 5px;
@@ -219,12 +219,12 @@ input[type]:checked ~ span.mid {
   color: yellow;
   padding: 0 3px;
 }
-.MovieRiting:before {
+.TVRiting:before {
   content: '⭐';
   position: relative;
   top: -2px;
 }
-.MovieInfo {
+.TVInfo {
   width: 100%; 
   height: 55px;
   display: flex;
@@ -235,20 +235,19 @@ input[type]:checked ~ span.mid {
   padding: 0 5px;
   overflow: auto;
 }
-.MovieInfo p {
+.TVInfo p {
   font-size: 12px;
   color: var(--tx);
   font-weight: bold;
 }
-.MovieInfo small {
+.TVInfo small {
   color: var(--tx);
   opacity: 0.7;
   font-size: 10px;
   font-weight: bold;
 }
-
-/* Movies Box Content & MoreBtn */
-.MBContent {
+/* TV Box Content & MoreBtn */
+.TvBContent {
   width: 100%;
   height: auto;
   display: flex;

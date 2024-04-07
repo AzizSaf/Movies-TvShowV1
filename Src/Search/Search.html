@@ -1,0 +1,97 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <title>Search</title>
+</head>
+<body>
+  
+  <header>
+  
+    <div class="NavBar">
+     
+      <img src="../Icons/search.png">
+      <p>Show Now</p>
+      <label class="Menu" for="check">
+        <input type="checkbox" id="check">
+        <span class="top"></span>
+        <span class="mid"></span>
+        <span class="bot"></span>
+      </label>
+  
+    </div>
+  
+    <div class="MenuBox">
+  
+      <a href="/index.html">Movies</a>
+      <a href="/TV Show/TV Show.html">TV Show</a>
+  
+    </div>
+  
+  </header>
+  
+  <main>
+    
+    <div class="Main">
+      
+      <div class="UserBox">
+        
+        <input type="text" placeholder="Search">
+        <img src="../Icons/search.png">
+        
+      </div>
+      
+      <div class="OptionsBox">
+        
+        <select class="ItemsBox" required>
+          
+          <option value="0">Type</option>
+          <option value="Movie">Movie</option>
+          <option value="TV">TV</option>
+          
+        </select>
+        
+      </div>
+      
+      <div class="Titles">
+      
+        <p>Search Result</p>
+      
+      </div>
+      
+      <span class="TitlesStyle">
+      
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      
+      </span>
+      
+      <div class="SearchBox">
+        
+        <div class="MBContent SearchResult"></div>
+        <div class="MoreBtn SRMore" onclick="getMore()">
+          <label for="btn">More</label>
+          <img id="btn" src="../Icons/arrow.png">
+        </div>
+        
+      </div>
+      
+      
+      
+      
+      
+    </div>
+    
+  </main>
+  
+<script src="./script.js"></script>
+</body>
+</html>
