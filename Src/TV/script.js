@@ -33,7 +33,7 @@ function getTheTV(id) {
     })
     .then(data => {
       //console.log(data)
-      document.title = data.title
+      document.title = data.name
       let MovieInfos = 
         document.querySelector('.MovieInfos')
       let MovieName =
